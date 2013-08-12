@@ -8,8 +8,10 @@ set(CMAKE_CXX_FLAGS "-g -Wall")
 
 # exclude RE2 from MinGW installation
 if (NOT ${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-	set(RE2_LIBRARY "/usr/local/lib/libre2.a")
-	set(RE2_INCLUDE_PATH "/usr/local/include/re2")
+#	set(RE2_LIBRARY "/usr/local/lib/libre2.a")
+#	set(RE2_INCLUDE_PATH "/usr/local/include/re2")
+	set(RE2_LIBRARY "$ENV{HOME}/usr/lib/libre2.a")
+	set(RE2_INCLUDE_PATH "$ENV{HOME}/usr/include/re2")
 	find_package (Threads)
 endif ()
 

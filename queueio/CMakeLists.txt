@@ -1,4 +1,4 @@
-include_directories(${IWAKI_SOURCE_DIR}/queueio)
+include_directories(${IWAKI_SOURCE_DIR}/queueio ${RE2_INCLUDE_PATH})
 link_directories(${IWAKI_BINARY_DIR}/queueio)
 
 add_library(queueio STATIC queueio.cc tinystr.cc tinyxml.cc tinyxmlerror.cc tinyxmlparser.cc)
